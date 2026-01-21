@@ -1,0 +1,129 @@
+/* כותרות */
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #6af3ff, 0 0 20px #6af3ff33;
+  }
+  to {
+    text-shadow: 0 0 20px #b07cff, 0 0 35px #b07cff66;
+  }
+}
+
+/* Fade & Slide */
+
+
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out; /* איטי יותר */
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* סמן גדל וקטן */
+@keyframes cursorPulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(1.35);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* צבע רקע משתנה */
+@keyframes bgShift {
+  0% {
+    background: linear-gradient(135deg, var(--bg-dark-purple), var(--bg-dark-blue), var(--bg-dark-teal));
+  }
+
+  25% {
+    background: linear-gradient(135deg, var(--bg-dark-teal), var(--bg-dark-purple), var(--bg-dark-blue));
+  }
+
+  50% {
+    background: linear-gradient(135deg, var(--bg-dark-blue), var(--bg-dark-teal), var(--bg-dark-purple));
+  }
+
+  75% {
+    background: linear-gradient(135deg, var(--bg-dark-purple), var(--bg-dark-teal), var(--bg-dark-blue));
+  }
+
+  100% {
+    background: linear-gradient(135deg, var(--bg-dark-purple), var(--bg-dark-blue), var(--bg-dark-teal));
+  }
+}
+
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s ease;
+}
+
+.scroll-animate.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Glow Pulse */
+
+@keyframes softGlow {
+
+  0%,
+  100% {
+    filter: drop-shadow(0 0 10px var(--glow-blue));
+  }
+
+  50% {
+    filter: drop-shadow(0 0 20px var(--glow-purple));
+  }
+}
+
+/* Gear Rotation */
+
+@keyframes spin {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+/* טקסט בזמן שאתה העסק שלך */
+
+@keyframes fadeOnce {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

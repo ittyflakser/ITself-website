@@ -1,0 +1,37 @@
+/* -------------------------------------------
+   SERVICES SECTION — Neon Tech Style
+------------------------------------------- */
+
+/* כותרת ראשית */
+.services-main-title {
+  font-size: 3rem;
+  margin-bottom: 4rem;
+  background: linear-gradient(90deg, var(--glow-blue), var(--glow-purple));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: floatTitle 4s ease-in-out infinite;
+}
+
+@keyframes floatTitle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* GRID להצגת השירותים */
+.services-grid {
+  display: grid;
+  gap: 2.5rem;
+  grid-auto-flow: column; /* חשוב: זורם אופקית ולא אנכית */
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  justify-items: center;
+}
+
+/* כותרת */
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: .8rem;
+  color: var(--glow-cyan);
+  text-shadow: 0 0 6px rgba(214, 216, 218, 0.8);
+}

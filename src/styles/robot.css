@@ -1,0 +1,6 @@
+.robot-section {
+    background: var(--glass);
+    border-radius: 25px;
+    backdrop-filter: blur(20px);
+  }
+  

@@ -1,0 +1,101 @@
+.gears-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  margin-top: 5rem;
+}
+
+/* גלגל (תחתית) */
+.gear {
+  position: relative;
+  width: 20vw;
+  height: 40vh;
+}
+
+/* גלגלים – חצי שקופים ללא hover */
+.gear-emoji-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: -5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.4;
+  transition: opacity 0.4s ease;
+}
+
+.gear-emoji {
+  user-select: none;
+  font-size: 220px;
+  line-height: 1;
+}
+
+/* כשהעכבר על הכפתור – הפעל סיבוב והצג */
+.cta-hover .gear-emoji-wrapper {
+  animation: spin 12s linear infinite;
+  opacity: 1;
+}
+
+/* טקסט בזמן שאתה העסק שלך */
+.fade-once {
+  animation: fadeOnce 0.6s ease-in-out;
+}
+
+.highlight {
+  font-weight: bold;
+  color: var(--glow-blue);
+}
+
+.fixed-label {
+  margin-bottom: 3rem;
+  font-weight: bold;
+  color: var(--glow-purple);
+}
+
+.into-gear-icon {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+}
+
+/* ---------------- שעון ---------------- */
+.clock {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.clock-hand {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform-origin: bottom center;
+  border-radius: 2px;
+}
+
+.clock-hand.hour {
+  width: 6px;
+  height: 45px;
+  background: #b07cff;
+  margin-left: -3px;
+}
+
+.clock-hand.minute {
+  width: 4px;
+  height: 65px;
+  background: #b07cff;
+  margin-left: -2px;
+}
+
+.clock-hand.second {
+  width: 2px;
+  height: 85px;
+  background: #6af3ff;
+  margin-left: -1px;
+}
